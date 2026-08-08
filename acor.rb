@@ -5,41 +5,57 @@
 class Acor < Formula
   desc "Aho-Corasick multi-pattern string matching on Redis or Valkey"
   homepage "https://github.com/skyoo2003/acor"
-  version "0.11.0"
+  version "1.5.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skyoo2003/acor/releases/download/v0.11.0/acor_0.11.0_darwin_amd64.tar.gz"
-      sha256 "c8cc1f78d27efce95539d51140a43d208364100cc5dea28cd0840e7e9dd2d274"
+      url "https://github.com/skyoo2003/acor/releases/download/v1.5.0/acor_1.5.0_darwin_amd64.tar.gz"
+      sha256 "e8bbd09794d2d9e73a7bec35c75a6ed036d1a2f160376ba7ca684602e800001f"
 
       define_method(:install) do
         bin.install "acor"
+        # A bottle contains the installed prefix, not the archive it was built from,
+        # so the notices have to be installed to survive a `brew install`. Adding them
+        # to archives.files above is not enough on its own.
+        doc.install "LICENSE", "NOTICE"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skyoo2003/acor/releases/download/v0.11.0/acor_0.11.0_darwin_arm64.tar.gz"
-      sha256 "cc7595126ae669d5e2598b3384ccd08504114cfc839bb4f8340719086561bf6f"
+      url "https://github.com/skyoo2003/acor/releases/download/v1.5.0/acor_1.5.0_darwin_arm64.tar.gz"
+      sha256 "d81dac36971a6e5023fe98fea21a1789d7d4b82bd2ba99c3777200b950233b3a"
 
       define_method(:install) do
         bin.install "acor"
+        # A bottle contains the installed prefix, not the archive it was built from,
+        # so the notices have to be installed to survive a `brew install`. Adding them
+        # to archives.files above is not enough on its own.
+        doc.install "LICENSE", "NOTICE"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skyoo2003/acor/releases/download/v0.11.0/acor_0.11.0_linux_amd64.tar.gz"
-      sha256 "05d5f701aee3af28cc99f73ca22abc1218f8ee06f36d9ffa4327ebee77c6bd5c"
+      url "https://github.com/skyoo2003/acor/releases/download/v1.5.0/acor_1.5.0_linux_amd64.tar.gz"
+      sha256 "6c350cd527a6271af4a031fa54e5980cead774f94b307be45b530265af65db67"
       define_method(:install) do
         bin.install "acor"
+        # A bottle contains the installed prefix, not the archive it was built from,
+        # so the notices have to be installed to survive a `brew install`. Adding them
+        # to archives.files above is not enough on its own.
+        doc.install "LICENSE", "NOTICE"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skyoo2003/acor/releases/download/v0.11.0/acor_0.11.0_linux_arm64.tar.gz"
-      sha256 "0c0e47fa3fe88b346f7f6ebd068af21762cf0cbc52a7f5196e530741be0890fe"
+      url "https://github.com/skyoo2003/acor/releases/download/v1.5.0/acor_1.5.0_linux_arm64.tar.gz"
+      sha256 "98ec433884d99040aa6fd400af9780305014f0e44152ab9beb850e92c77cc104"
       define_method(:install) do
         bin.install "acor"
+        # A bottle contains the installed prefix, not the archive it was built from,
+        # so the notices have to be installed to survive a `brew install`. Adding them
+        # to archives.files above is not enough on its own.
+        doc.install "LICENSE", "NOTICE"
       end
     end
   end
