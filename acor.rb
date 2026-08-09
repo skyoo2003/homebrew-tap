@@ -5,13 +5,13 @@
 class Acor < Formula
   desc "Aho-Corasick multi-pattern string matching on Redis or Valkey"
   homepage "https://github.com/skyoo2003/acor"
-  version "1.5.1"
+  version "1.5.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skyoo2003/acor/releases/download/v1.5.1/acor_1.5.1_darwin_amd64.tar.gz"
-      sha256 "213ad901ee6cda3417029fbec261ad3427624346072169b664638b242b9239ef"
+      url "https://github.com/skyoo2003/acor/releases/download/v1.5.2/acor_1.5.2_darwin_amd64.tar.gz"
+      sha256 "18c70e749838516d58032853b648162e8325482f6fa4ee16ef2e2af6a734aa14"
 
       define_method(:install) do
         bin.install "acor"
@@ -22,8 +22,8 @@ class Acor < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skyoo2003/acor/releases/download/v1.5.1/acor_1.5.1_darwin_arm64.tar.gz"
-      sha256 "16e5427dd95a19acf32153ae1560d339a9e74c92143d4e920147cb5a2a58da94"
+      url "https://github.com/skyoo2003/acor/releases/download/v1.5.2/acor_1.5.2_darwin_arm64.tar.gz"
+      sha256 "fe80c189e317f501f111a2f756c910ac045d5f652118bee3b240e8a828548236"
 
       define_method(:install) do
         bin.install "acor"
@@ -37,8 +37,8 @@ class Acor < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skyoo2003/acor/releases/download/v1.5.1/acor_1.5.1_linux_amd64.tar.gz"
-      sha256 "622484bb6acb258b121665bee0f40932c5ad850733868c986600cf40787e6a6a"
+      url "https://github.com/skyoo2003/acor/releases/download/v1.5.2/acor_1.5.2_linux_amd64.tar.gz"
+      sha256 "5e95b0f68803ee22d50382be6dfcabf139c0190cde8a9b53e8577c14a34c9bf9"
       define_method(:install) do
         bin.install "acor"
         # A bottle contains the installed prefix, not the archive it was built from,
@@ -48,8 +48,8 @@ class Acor < Formula
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skyoo2003/acor/releases/download/v1.5.1/acor_1.5.1_linux_arm64.tar.gz"
-      sha256 "b0d8ff916b73eefed3094ebbc458c1893f1f77fb9e060205e2ca63f598cea4dd"
+      url "https://github.com/skyoo2003/acor/releases/download/v1.5.2/acor_1.5.2_linux_arm64.tar.gz"
+      sha256 "b2d867cb202ba321587b0dbecdac065750c85e256759be37370ec7ac5c56e607"
       define_method(:install) do
         bin.install "acor"
         # A bottle contains the installed prefix, not the archive it was built from,
