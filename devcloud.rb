@@ -5,21 +5,21 @@
 class Devcloud < Formula
   desc "Local development companion for cloud-native apps"
   homepage "https://github.com/skyoo2003/devcloud"
-  version "0.2.0"
+  version "1.0.0"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/skyoo2003/devcloud/releases/download/v0.2.0/devcloud_0.2.0_darwin_amd64.tar.gz"
-      sha256 "d5c3789614aea3043b6f02c3ccd871316a2d5d724ef0c632a414fda22314c429"
+      url "https://github.com/skyoo2003/devcloud/releases/download/v1.0.0/devcloud_1.0.0_darwin_amd64.tar.gz"
+      sha256 "6eb4c384ef0bbf12fec63174582b9a9224bf8df962b0fd28eb0187c7bdbf87bb"
 
       define_method(:install) do
         bin.install "devcloud"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/skyoo2003/devcloud/releases/download/v0.2.0/devcloud_0.2.0_darwin_arm64.tar.gz"
-      sha256 "c6e5a154cd9063b13d452afb8a3055c357a9a1388f01efae3dab5d3378ef39d5"
+      url "https://github.com/skyoo2003/devcloud/releases/download/v1.0.0/devcloud_1.0.0_darwin_arm64.tar.gz"
+      sha256 "cede8e4abaa23802ab8e8a15c4ebd25e4062d7f8e8445c6d8166260b3c5e6b22"
 
       define_method(:install) do
         bin.install "devcloud"
@@ -29,15 +29,15 @@ class Devcloud < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skyoo2003/devcloud/releases/download/v0.2.0/devcloud_0.2.0_linux_amd64.tar.gz"
-      sha256 "95e7b7620de3d470de25c995897e9df1334e64fe52c5b329b5d84509bcb2cbe3"
+      url "https://github.com/skyoo2003/devcloud/releases/download/v1.0.0/devcloud_1.0.0_linux_amd64.tar.gz"
+      sha256 "ed86e2aa72dcad883327c24dbd3350bf857ae6ec5a48a84c3bda34b59e12d9b7"
       define_method(:install) do
         bin.install "devcloud"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/skyoo2003/devcloud/releases/download/v0.2.0/devcloud_0.2.0_linux_arm64.tar.gz"
-      sha256 "0b4b41a07c8eb08e92ab237bbb38620ac03ca44241df6cc07c96b8c4ab692495"
+      url "https://github.com/skyoo2003/devcloud/releases/download/v1.0.0/devcloud_1.0.0_linux_arm64.tar.gz"
+      sha256 "eea1d50c6d996271be110b30bb03e680a75b0427363d3f7b5a0aa3d3da22b8a3"
       define_method(:install) do
         bin.install "devcloud"
       end
