@@ -11,7 +11,7 @@ class Devcloud < Formula
   on_macos do
     if Hardware::CPU.intel?
       url "https://github.com/skyoo2003/devcloud/releases/download/v1.0.0/devcloud_1.0.0_darwin_amd64.tar.gz"
-      sha256 "6eb4c384ef0bbf12fec63174582b9a9224bf8df962b0fd28eb0187c7bdbf87bb"
+      sha256 "6545f7726d9eefd93ec042720f669b113b4305bce1befbb82de08d3aa8e2221e"
 
       define_method(:install) do
         bin.install "devcloud"
@@ -19,7 +19,7 @@ class Devcloud < Formula
     end
     if Hardware::CPU.arm?
       url "https://github.com/skyoo2003/devcloud/releases/download/v1.0.0/devcloud_1.0.0_darwin_arm64.tar.gz"
-      sha256 "cede8e4abaa23802ab8e8a15c4ebd25e4062d7f8e8445c6d8166260b3c5e6b22"
+      sha256 "5d663ca0a6269704280e2e833e4d3a4d4e1337685e7d8cbf5a316c3f3a6b3c10"
 
       define_method(:install) do
         bin.install "devcloud"
@@ -30,14 +30,14 @@ class Devcloud < Formula
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
       url "https://github.com/skyoo2003/devcloud/releases/download/v1.0.0/devcloud_1.0.0_linux_amd64.tar.gz"
-      sha256 "ed86e2aa72dcad883327c24dbd3350bf857ae6ec5a48a84c3bda34b59e12d9b7"
+      sha256 "66be0913db14dccb02d294b3990e6b840629389077b9666a0e3dec8fa8952c3b"
       define_method(:install) do
         bin.install "devcloud"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
       url "https://github.com/skyoo2003/devcloud/releases/download/v1.0.0/devcloud_1.0.0_linux_arm64.tar.gz"
-      sha256 "eea1d50c6d996271be110b30bb03e680a75b0427363d3f7b5a0aa3d3da22b8a3"
+      sha256 "ea2dae93d25d60b95ab3ff9a4498800353347b17bed160f6077fe476b270311c"
       define_method(:install) do
         bin.install "devcloud"
       end
