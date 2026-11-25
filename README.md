@@ -11,6 +11,7 @@ brew tap skyoo2003/tap
 | [`acor`](https://github.com/skyoo2003/acor) | Aho-Corasick automaton working On Redis/Valkey |
 | [`devcloud`](https://github.com/skyoo2003/devcloud) | Local development companion for cloud-native apps |
 | [`kvs`](https://github.com/skyoo2003/kvs) | A key-value store as a distributed server or a Go module |
+| [`locite`](https://github.com/skyoo2003/locite) (cask) | Search and summarize local documents on-device with cited sources |
 
 Install without tapping first:
 
@@ -26,3 +27,7 @@ GitHub release.
 Every file under `Formula/` and `Casks/` is generated and committed by
 GoReleaser from the source repository's release workflow — edit `brews` or
 `homebrew_casks` in that repository's `.goreleaser.yaml`, not the file here.
+
+`Casks/locite.rb` is the exception: a maintainer opens a pull request with
+`scripts/bump-homebrew-tap.sh` in skyoo2003/locite after each release — edit
+`packaging/homebrew/locite.rb` there, not the file here.
